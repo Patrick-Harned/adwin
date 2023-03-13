@@ -34,6 +34,8 @@ No drift:
 
 `for i in $(seq 1 100); echo 1 | ./main`
 
+`for i in $(seq 1 100); echo $(($RANDOM%3))   | ./main`
+
 Drift:
 
 `seq 1 100 | ./main`
