@@ -1,4 +1,8 @@
-# Rust Implementation of the AWDIN drift detection algorithm
+# ADWIN
+
+Rust implementation of the ADWIN drift detection algorithn
+
+## Description
 
 From https://riverml.xyz/dev/api/drift/ADWIN/:
 
