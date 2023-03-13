@@ -50,6 +50,9 @@ fn write(buf:String) -> io::Result<()> {
 
                 }
 
+            vec.pop();
+            vec2.pop();
+
         }
         vec.push(x);
     }
