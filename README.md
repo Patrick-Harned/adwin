@@ -39,3 +39,8 @@ Drift:
 `seq 1 100 | ./main`
 
 ![image](https://user-images.githubusercontent.com/73145124/224585186-63b45a88-81d1-4694-938f-e258ef05d4be.png)
+
+
+## Notes
+
+Significance value and window size are hard coded
