@@ -23,6 +23,7 @@ fn e_cut(window_1_size: i32, window_2_size:i32) -> f32{
 
 
 
+
 fn write(buf:String) -> io::Result<()> {
 
     let mut vec: Vec<i32> = vec![];
@@ -35,10 +36,13 @@ fn write(buf:String) -> io::Result<()> {
 
 
         if vec.len()as i32 > window_size{
+
             vec2.push(x);
 
-            if vec2.len() as i32 == window_size{
-                if (vec.iter().sum::<i32>() as f32 / vec.len() as f32) - (vec2.iter().sum::<i32>() as f32 / vec.len() as f32) >e_cut(vec.len() as i32, vec2.len() as i32) {
+            let vec1_avg = vec.iter().sum::<i32>() as f32 / vec.len() as f32;
+            let vec2_avg = vec2.iter().sum::<i32>() as f32 / vec.len() as f32;
+
+                if (vec1_avg -vec2_avg) > e_cut(vec.len() as i32, vec2.len() as i32) {
                     let out: String = "Found drift at ".to_owned() + &x.to_string() + "\n";
                     io::stdout().write(out.as_ref())?;
                     vec.clear();
@@ -46,7 +50,8 @@ fn write(buf:String) -> io::Result<()> {
 
                 }
 
-            }
+
+
         }
         vec.push(x);
     }
