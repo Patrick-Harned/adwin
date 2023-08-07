@@ -28,7 +28,7 @@ fn write(buf:String) -> io::Result<()> {
 
 
     let mut vec: Vec<i32> = vec![];
-    let window_size :i32 = 100;
+    let window_size :i32 = 10;
     let mut window: Vec<i32> = vec![];
 
     for i in buf.trim().split('\n') {
